@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.button_api {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.weather_card {
+
+  background-color: #FFFFFF;
+}
+
+.card_temp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.small_card{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 95px;
+  width: 75px;
+  margin-right: 7px;
+}
+
+.container_weekly {
+  display: flex;
+  flex-direction: row;
+}
+
+.small_card_active {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 95px;
+    width: 75px;
+    margin-right: 7px;
+}
