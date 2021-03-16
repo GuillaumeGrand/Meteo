@@ -18,21 +18,35 @@ code {
   justify-content: space-around;
 }
 
+#meteoCity1{
+  margin-top: 32px;
+}
+
 .button_api {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  margin-top: 32px;
 }
 
 .weather_card {
-
+  width: 410px;
+  height: 95px;
   background-color: #FFFFFF;
 }
 
 .card_temp{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.container_weekly {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
 }
 
 .small_card{
@@ -44,11 +58,6 @@ code {
   margin-right: 7px;
 }
 
-.container_weekly {
-  display: flex;
-  flex-direction: row;
-}
-
 .small_card_active {
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -58,4 +67,52 @@ code {
     height: 95px;
     width: 75px;
     margin-right: 7px;
+}
+
+.day {
+  line-height: 15px;
+  padding-top: 7px;
+  color: #bababa;
+}
+
+.temp_max {
+  color: #878787 !important;
+}
+
+.temp_min {
+  color: #bababa;
+}
+
+.container_dayly{
+  background-color: green;
+  height:60px;
+  width: 410px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meteo_app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left_dayly {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon_right{
+  display: inline-block;
+    vertical-align: top;
+    height: 60px;
+    margin-top: unset;
+    width: 60px;
 }

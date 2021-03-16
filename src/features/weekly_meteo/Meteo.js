@@ -25,10 +25,7 @@ export function Meteo() {
           onChange={onCity1Changed}
         />
           <div className="button_api" onClick={() => dispatch(fetchMeteo1(city_1))}>
-
-            test
-
-
+            Meteo
           </div>
       </div>
     </div>

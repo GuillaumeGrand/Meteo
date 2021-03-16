@@ -1,5 +1,6 @@
 import React from 'react';
-import { Meteo } from './features/meteo/Meteo';
+import { DaylyMeteo } from './features/dayly_meteo/DaylyMeteo';
+import { Meteo } from './features/weekly_meteo/Meteo';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -19,7 +20,10 @@ function App() {
                 path="/"
                 render={() => (
                   <React.Fragment>
+                  <div className="meteo_app">
+                    <DaylyMeteo/>
                     <Meteo />
+                  </div>
                   </React.Fragment>
                 )}
               />

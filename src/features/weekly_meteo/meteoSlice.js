@@ -3,6 +3,7 @@ import { fetchMeteo1 } from '../../api/request'
 
 const initialState = {
   city1: ["test1"],
+  button_index: {"index":0},
   status: 'idle',
   error: null
 }
@@ -11,7 +12,11 @@ const initialState = {
 export const meteoSlice = createSlice({
   name: 'meteo',
   initialState,
-  reducers: {},
+  reducers: {
+    buttonIndex(state, action) {
+      state.button_index = action.payload
+    },
+  },
   extraReducers: {
     [fetchMeteo1.fulfilled]: (state, action) => {
       state.status = 'succeeded'
@@ -37,3 +42,6 @@ export const selectCity1 = state => state.meteo.city1;
 export default meteoSlice.reducer;
 
 export const weatherData1 = (state) => state.meteo.city1[0].list
+export const weatherData = (state) => state.meteo.city1
+export const { buttonIndex } = meteoSlice.actions
+export const dayIndex = (state) => state.meteo.button_index
