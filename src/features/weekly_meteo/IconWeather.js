@@ -6,7 +6,7 @@ const url =  "http://openweathermap.org/img/w/" + day["weather"][0]["icon"] + ".
 
 return (
     <div>
-        <img src= {url} alt='Icon depicting current weather.'/>
+        <img src= {url} alt='Icon depicting current weather.' className="icon"/>
     </div>
   )
 }

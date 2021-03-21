@@ -5,7 +5,7 @@ export const RainWind = ({day}) => {
   const wind = day["wind"]["speed"] + " noeud"
   return (
     <div className="humidity_wind">
-      <div className="humidity"><span>{humidity}</span></div>
+      <div className="humidity"><span>Humidity {humidity}</span></div>
       <div className="wind"><span>{wind}</span></div>
     </div>
   )

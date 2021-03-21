@@ -83,8 +83,7 @@ code {
   color: #bababa;
 }
 
-.container_dayly{
-  background-color: green;
+.container_daily{
   height:60px;
   width: 410px;
   display: flex;
@@ -103,16 +102,20 @@ code {
   align-items: center;
 }
 
-.left_dayly {
+.left_daily {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.icon_right{
+.left_daily > div > img {
   display: inline-block;
     vertical-align: top;
     height: 60px;
     margin-top: unset;
     width: 60px;
+}
+
+.daily_max_temp > span {
+  font-style: 48px;
 }

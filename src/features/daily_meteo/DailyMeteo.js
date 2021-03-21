@@ -3,11 +3,13 @@ import { Day } from '../weekly_meteo/Day'
 import { IconWeather } from '../weekly_meteo/IconWeather'
 import { RainWind } from './RainWind'
 import { Address } from './Address'
+import { DailyTemp } from './DailyTemp'
+import  LineGraph  from './LineGraph'
 import { useSelector } from 'react-redux'
 import { weatherData } from '../weekly_meteo/meteoSlice'
 import { dayIndex } from '../weekly_meteo/meteoSlice'
 
-export function DaylyMeteo() {
+export function DailyMeteo() {
   const btn_index = useSelector((state) => dayIndex(state))
   const stateValue = useSelector((state) => weatherData(state))
   const fetchMeteo1Status = useSelector((state) => state.meteo.status)
@@ -19,21 +21,25 @@ export function DaylyMeteo() {
   if (fetchMeteo1Status === 'idle') {
   } else if (fetchMeteo1Status === 'succeeded') {
     const day = stateValue[0].list[index]
-    
-    left_day.push(<IconWeather day={day} className="icon_right"/>)
-    left_day.push(<Day day={day} className="day_right"/>)
-    left_day.push(<RainWind day={day} className="RainWind"/>)
-    rigth_day.push(<Address day={day} objet={stateValue} className="left_address"/>)
+//     console.log(index)
+// console.log(stateValue[0].list)
+    left_day.push(<IconWeather day={day}/>)
+    left_day.push(<DailyTemp day={day}/>)
+    left_day.push(<RainWind day={day}/>)
+    rigth_day.push(<Address day={day} objet={stateValue}/>)
   }
 
   return (
-      <div className="container_dayly" >
-        <div className="left_dayly">
+    <>
+      <div className="container_daily" >
+        <div className="left_daily">
           {left_day}
         </div>
-        <div className="right_dayly">
+        <div className="right_daily">
           {rigth_day}
         </div>
       </div>
+      <LineGraph />
+    </>
   );
 }

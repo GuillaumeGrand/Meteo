@@ -1,5 +1,5 @@
 import React from 'react';
-import { DaylyMeteo } from './features/dayly_meteo/DaylyMeteo';
+import { DailyMeteo } from './features/daily_meteo/DailyMeteo';
 import { Meteo } from './features/weekly_meteo/Meteo';
 import './App.css';
 import {
@@ -21,7 +21,7 @@ function App() {
                 render={() => (
                   <React.Fragment>
                   <div className="meteo_app">
-                    <DaylyMeteo/>
+                    <DailyMeteo/>
                     <Meteo />
                   </div>
                   </React.Fragment>
