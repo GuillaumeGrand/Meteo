@@ -80,7 +80,7 @@ export default class LineGraph extends Component {
  const final_day = list.slice(index_ref, index_ref + 8);
 
   for (let i of final_day) {
-    data.push(i["main"]["temp"] -273.15)
+    data.push(Math.ceil(i["main"]["temp"] -273.15))
   }
 
       new Chart(myChartRef, {
