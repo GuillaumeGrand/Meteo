@@ -16,17 +16,18 @@ export function DailyMeteo() {
 
   const left_day = []
   const rigth_day = []
+  const graph = []
   const index = (btn_index["index"] === 0) ? 0 : btn_index["index"] * 8 - 1
 
   if (fetchMeteo1Status === 'idle') {
   } else if (fetchMeteo1Status === 'succeeded') {
     const day = stateValue[0].list[index]
-//     console.log(index)
-// console.log(stateValue[0].list)
+
     left_day.push(<IconWeather day={day}/>)
     left_day.push(<DailyTemp day={day}/>)
     left_day.push(<RainWind day={day}/>)
     rigth_day.push(<Address day={day} objet={stateValue}/>)
+    graph.push(<LineGraph  objet={stateValue} index={index}/>)
   }
 
   return (
@@ -39,7 +40,7 @@ export function DailyMeteo() {
           {rigth_day}
         </div>
       </div>
-      <LineGraph />
+      {graph}
     </>
   );
 }
